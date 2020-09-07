@@ -1,5 +1,6 @@
 package com.lin.springcloud.controller;
 
+import ch.qos.logback.core.util.TimeUtil;
 import com.lin.springcloud.service.PaymentHystrixService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -27,7 +29,11 @@ public class OrderHystrixController {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1500")
     })
     public String paymentInfo_TimeOut(@PathVariable("id") Integer id){
-        int age = 10/0;
+        try{
+            TimeUnit.SECONDS.sleep(3);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         String result = paymentHystrixService.paymentInfo_TimeOut(id);
         return result;
     }
