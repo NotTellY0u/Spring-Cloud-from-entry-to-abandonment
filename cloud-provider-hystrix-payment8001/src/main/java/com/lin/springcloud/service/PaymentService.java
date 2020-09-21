@@ -29,6 +29,7 @@ public class PaymentService {
     }
 
     public String paymentInfo_TimeOutHandler(Integer id) {
+        String serialNumble = IdUtil.simpleUUID();
         return "线程池" + Thread.currentThread().getName() + "paymentInfo_TimeOutHandler,id" + id + '\t' + "o(╥﹏╥)o";
     }
 
@@ -37,7 +38,7 @@ public class PaymentService {
             throw new RuntimeException("id 不能为负数");
         }
         String serialNumble = IdUtil.simpleUUID();
-        UUID.randomUUID().toString();
+
         return Thread.currentThread().getName()+"\t"+"调用成功，流水号"+serialNumble;
     }
 
