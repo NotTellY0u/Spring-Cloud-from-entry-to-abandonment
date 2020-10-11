@@ -35,9 +35,6 @@ public class PaymentService {
     }
 
     public String paymentCircuitBreaker(@PathVariable("id") Integer id){
-        if(id<0){
-            throw new RuntimeException("id 不能为负数");
-        }
         String serialNumble = IdUtil.simpleUUID();
         UUID.randomUUID().toString();
         return Thread.currentThread().getName()+"\t"+"调用成功，流水号"+serialNumble;
