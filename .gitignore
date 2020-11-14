@@ -1,3 +1,8 @@
 .idea
 lib
 */target
+/cloud-consumer-hystrix-dashboard9001/cloud-consumer-hystrix-dashboard9001.iml
+/cloud-consumer-hystrix-dashboard9001/src/test/
+/cloud-api-commons/cloud-api-commons.iml
+/cloud-consumer-feign-hystrix-order80/cloud-consumer-feign-hystrix-order80.iml
+/cloud-gateway-gateway9527/cloud-gateway-gateway9527.iml
