@@ -8,7 +8,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost/db2020?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
     username: root
-    password: root
+    password: abcd1234
 # application.yml没有变叶子图标是因为pom文件没配置好或没install好或没刷新
 eureka:
   client:
