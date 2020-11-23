@@ -1,0 +1,20 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:Saber891/Spring-Cloud-from-entry-to-abandonment.git
+          search-paths:
+            - springcloud-config
+      label: master
+
+eureka:
+  client:
+    server-url:
+      defaultZone:http://localhost:7001/eureka
+
+
