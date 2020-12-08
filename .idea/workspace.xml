@@ -51,7 +51,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c840705d-bbf3-4b85-8717-e23c203cdbd3" name="Default Changelist" comment="" />
+    <list default="true" id="c840705d-bbf3-4b85-8717-e23c203cdbd3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="1c4984db-0526-48a2-b3a8-d49b4e780be4" name="新模块" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +77,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -81,7 +87,7 @@
         <option name="userSettingsFile" value="$MAVEN_REPOSITORY$/mail/settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="disabledProfiles">
+    <option name="enabledProfiles">
       <list>
         <option value="jdk-1.8" />
       </list>
@@ -110,7 +116,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3448276" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -283,6 +289,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c840705d-bbf3-4b85-8717-e23c203cdbd3" name="Default Changelist" comment="" />
+      <changelist id="1c4984db-0526-48a2-b3a8-d49b4e780be4" name="新模块" comment="" />
       <created>1590317743419</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -318,7 +325,7 @@
       <workItem from="1606138499378" duration="2805000" />
       <workItem from="1606227637498" duration="722000" />
       <workItem from="1607428052599" duration="3284000" />
-      <workItem from="1607438604634" duration="443000" />
+      <workItem from="1607438604634" duration="1640000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1602399918524</created>
@@ -547,14 +554,22 @@
       <screen x="0" y="23" width="1680" height="955" />
     </state>
     <state x="478" y="269" key="MultipleFileMergeDialog/0.23.1680.955@0.23.1680.955" timestamp="1602399202373" />
+    <state x="473" y="207" width="754" height="587" key="NewModule_or_Project.wizard" timestamp="1607439222005">
+      <screen x="0" y="23" width="1680" height="955" />
+    </state>
+    <state x="473" y="207" width="754" height="587" key="NewModule_or_Project.wizard/0.23.1680.955@0.23.1680.955" timestamp="1607439222005" />
     <state x="352" y="210" key="RollbackChangesDialog" timestamp="1605362164776">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
     <state x="352" y="210" key="RollbackChangesDialog/0.23.1680.955@0.23.1680.955" timestamp="1605362164776" />
-    <state x="328" y="82" key="SettingsEditor" timestamp="1607439048912">
+    <state x="312" y="87" key="SettingsEditor" timestamp="1607440246658">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
-    <state x="328" y="82" key="SettingsEditor/0.23.1680.955@0.23.1680.955" timestamp="1607439048912" />
+    <state x="312" y="87" key="SettingsEditor/0.23.1680.955@0.23.1680.955" timestamp="1607440246658" />
+    <state x="689" y="421" key="VCS.ChangelistChooser" timestamp="1607439678342">
+      <screen x="0" y="23" width="1680" height="955" />
+    </state>
+    <state x="689" y="421" key="VCS.ChangelistChooser/0.23.1680.955@0.23.1680.955" timestamp="1607439678342" />
     <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1606141869049">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
@@ -571,10 +586,10 @@
       <screen x="0" y="23" width="1680" height="955" />
     </state>
     <state x="638" y="421" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.955@0.23.1680.955" timestamp="1602399653824" />
-    <state x="370" y="163" key="new project wizard" timestamp="1607438835875">
+    <state x="370" y="163" key="new project wizard" timestamp="1607440097939">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
-    <state x="370" y="163" key="new project wizard/0.23.1680.955@0.23.1680.955" timestamp="1607438835875" />
+    <state x="370" y="163" key="new project wizard/0.23.1680.955@0.23.1680.955" timestamp="1607440097939" />
     <state x="505" y="232" width="670" height="676" key="search.everywhere.popup" timestamp="1606138998802">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
