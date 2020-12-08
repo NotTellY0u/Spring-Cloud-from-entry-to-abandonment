@@ -110,7 +110,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3448276" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -318,7 +318,7 @@
       <workItem from="1606138499378" duration="2805000" />
       <workItem from="1606227637498" duration="722000" />
       <workItem from="1607428052599" duration="3284000" />
-      <workItem from="1607438604634" duration="443000" />
+      <workItem from="1607438604634" duration="750000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1602399918524</created>
@@ -547,14 +547,18 @@
       <screen x="0" y="23" width="1680" height="955" />
     </state>
     <state x="478" y="269" key="MultipleFileMergeDialog/0.23.1680.955@0.23.1680.955" timestamp="1602399202373" />
+    <state x="473" y="207" width="754" height="587" key="NewModule_or_Project.wizard" timestamp="1607439222005">
+      <screen x="0" y="23" width="1680" height="955" />
+    </state>
+    <state x="473" y="207" width="754" height="587" key="NewModule_or_Project.wizard/0.23.1680.955@0.23.1680.955" timestamp="1607439222005" />
     <state x="352" y="210" key="RollbackChangesDialog" timestamp="1605362164776">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
     <state x="352" y="210" key="RollbackChangesDialog/0.23.1680.955@0.23.1680.955" timestamp="1605362164776" />
-    <state x="328" y="82" key="SettingsEditor" timestamp="1607439048912">
+    <state x="312" y="87" key="SettingsEditor" timestamp="1607439228704">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
-    <state x="328" y="82" key="SettingsEditor/0.23.1680.955@0.23.1680.955" timestamp="1607439048912" />
+    <state x="312" y="87" key="SettingsEditor/0.23.1680.955@0.23.1680.955" timestamp="1607439228704" />
     <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1606141869049">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
