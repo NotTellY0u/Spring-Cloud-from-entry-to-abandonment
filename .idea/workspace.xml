@@ -18,44 +18,11 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:cloud-consumerzk-order80" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:cloud-provider-payment8004" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c840705d-bbf3-4b85-8717-e23c203cdbd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c840705d-bbf3-4b85-8717-e23c203cdbd3" name="Default Changelist" comment="" />
     <list id="1c4984db-0526-48a2-b3a8-d49b4e780be4" name="新模块" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +292,7 @@
       <workItem from="1606138499378" duration="2805000" />
       <workItem from="1606227637498" duration="722000" />
       <workItem from="1607428052599" duration="3284000" />
-      <workItem from="1607438604634" duration="1640000" />
+      <workItem from="1607438604634" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1602399918524</created>
@@ -418,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606141865811</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="创建新模块">
+      <created>1607440390733</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607440390733</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +433,8 @@
     <MESSAGE value="gateway predicates" />
     <MESSAGE value="gateway 断言" />
     <MESSAGE value="config" />
-    <option name="LAST_COMMIT_MESSAGE" value="config" />
+    <MESSAGE value="创建新模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建新模块" />
   </component>
   <component name="WindowStateProjectService">
     <state x="596" y="171" key="#HTTP_Proxy" timestamp="1602399002118">
@@ -550,10 +525,10 @@
       <screen x="0" y="23" width="1680" height="955" />
     </state>
     <state x="168" y="108" key="MergeDialog/0.23.1680.955@0.23.1680.955" timestamp="1602399202327" />
-    <state x="478" y="269" key="MultipleFileMergeDialog" timestamp="1602399202373">
+    <state x="478" y="269" key="MultipleFileMergeDialog" timestamp="1607440416181">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
-    <state x="478" y="269" key="MultipleFileMergeDialog/0.23.1680.955@0.23.1680.955" timestamp="1602399202373" />
+    <state x="478" y="269" key="MultipleFileMergeDialog/0.23.1680.955@0.23.1680.955" timestamp="1607440416181" />
     <state x="473" y="207" width="754" height="587" key="NewModule_or_Project.wizard" timestamp="1607439222005">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
@@ -570,10 +545,10 @@
       <screen x="0" y="23" width="1680" height="955" />
     </state>
     <state x="689" y="421" key="VCS.ChangelistChooser/0.23.1680.955@0.23.1680.955" timestamp="1607439678342" />
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1606141869049">
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2" timestamp="1607440394117">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
-    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.955@0.23.1680.955" timestamp="1606141869049" />
+    <state x="440" y="240" key="Vcs.Push.Dialog.v2/0.23.1680.955@0.23.1680.955" timestamp="1607440394117" />
     <state x="745" y="384" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605412346819">
       <screen x="0" y="23" width="1680" height="955" />
     </state>
