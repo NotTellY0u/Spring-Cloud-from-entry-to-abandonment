@@ -1,13 +1,13 @@
-package me.lin.mall.product;
+package me.lin.mail.ware;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MallProductApplicationTests {
+class MailWareApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
