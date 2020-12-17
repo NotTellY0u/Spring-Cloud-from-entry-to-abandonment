@@ -133,7 +133,11 @@ class Grammer {
      * @Date:  2020/12/17 15:26
      */
     fun foreach(){
-        
+        val list = listOf<Int>(1,2,3,4,5,6,7)
+        var total = 0
+        list.forEach{
+            total += it
+        }
     }
     
 
