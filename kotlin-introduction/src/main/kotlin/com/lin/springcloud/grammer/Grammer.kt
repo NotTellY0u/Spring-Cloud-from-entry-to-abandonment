@@ -96,7 +96,13 @@ class Grammer {
         val unChangeAbleList2 = listOf<Int>(5)
         val unChangeAbleList3 = unChangeAbleList1 + unChangeAbleList2
     }
-
+    /**
+     * @Description: 内部函数与外部函数
+     * @Param
+     * @return
+     * @Author shangqing yang
+     * @Date:  2020/12/17 15:23
+     */
     fun outFunction(str:String):String{
         fun innerFunction1(str:String):String{
             return "1:${str}"
@@ -106,6 +112,30 @@ class Grammer {
         }
         return "${innerFunction1(str)} ${innerFunction2(str)}"
     }
+    /**
+     * @Description: let
+     * @Param  
+     * @return 
+     * @Author shangqing yang
+     * @Date:  2020/12/17 15:25
+     */
+    fun let(){
+        val user = User("芭蕉","男",200).let {
+            it.gender = "雄性"
+            it
+        }
+    }
+    /**
+     * @Description: 更好的遍历
+     * @Param  
+     * @return 
+     * @Author shangqing yang
+     * @Date:  2020/12/17 15:26
+     */
+    fun foreach(){
+        
+    }
+    
 
 
 
