@@ -139,6 +139,19 @@ class Grammer {
             total += it
         }
     }
+    /**
+     * @Description: 响应式处理,将体重列表转换为用户列表
+     * @Param
+     * @return
+     * @Author shangqing yang
+     * @Date:  2020/12/17 15:33
+     */
+    fun mapFunction(){
+        val weightList = listOf(100,200,300,400)
+        val userList = weightList.map {
+            User("姓名","未知",it)
+        }
+    }
     
 
 
