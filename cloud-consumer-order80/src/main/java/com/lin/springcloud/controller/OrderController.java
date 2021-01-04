@@ -53,7 +53,7 @@ public class OrderController {
             return new CommonResult<>(444,"操作失败");
         }
     }
-
+  //负载均衡
     @GetMapping(value = "/consumer/payment/lb")
     public String getPaymentLB(){
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
