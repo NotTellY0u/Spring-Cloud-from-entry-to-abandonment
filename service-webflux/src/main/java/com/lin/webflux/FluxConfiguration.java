@@ -1,0 +1,27 @@
+package com.lin.webflux;
+
+import static org.springframework.web.
+        reactive.function.server.RouterFunctions.route;
+import static org.springframework.web.
+        reactive.function.server.RequestPredicates.GET;
+import static org.springframework.web.
+        reactive.function.server.ServerResponse.ok;
+import static reactor.core.publisher.Mono.just;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.server.RouterFunction;
+
+@Configuration
+public class FluxConfiguration {
+    /**
+     * 运行，网址输入 IP:8080/hello 看看
+     * @return
+     */
+    @Bean
+    public RouterFunction<?> helloRouterFunction(){
+        return route(GET("/hello"),
+                serverRequest -> ok().body(just("Hello World!"),String.class));
+    }
+
+}
