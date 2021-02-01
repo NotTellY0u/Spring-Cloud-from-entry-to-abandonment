@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 
 /**
  * @Description
- * 1.类默认使用 final修饰，
+ * 1.类默认使用 final修饰
  * @Author        shangqing yang
  * @Date          2020/11/12 16:42
  * @ModifyDate    [修改人] [修改时间] [修改描述]
@@ -125,6 +125,7 @@ class Grammer {
             it
         }
     }
+
     /**
      * @Description: 更好的遍历
      * @Param  
@@ -139,6 +140,7 @@ class Grammer {
             total += it
         }
     }
+
     /**
      * @Description: 响应式处理,将体重列表转换为用户列表
      * @Param
@@ -152,9 +154,4 @@ class Grammer {
             User("姓名","未知",it)
         }
     }
-    
-
-
-
-
 }
