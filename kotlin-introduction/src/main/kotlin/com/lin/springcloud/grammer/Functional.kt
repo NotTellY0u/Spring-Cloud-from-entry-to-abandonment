@@ -9,5 +9,4 @@ package com.lin.springcloud.grammer
 class Functional {
 
 
-
 }

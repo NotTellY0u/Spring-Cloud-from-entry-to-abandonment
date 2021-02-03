@@ -32,32 +32,33 @@ public class OrderController {
     private DiscoveryClient discoveryClient;
 
     @GetMapping("/consumer/payment/create")
-    public CommonResult<Payment> create(Payment payment){
+    public CommonResult<Payment> create(Payment payment) {
         log.info("创建成功！");
-        return restTemplate.postForObject(PAYMENT_URL+"/payment/create",payment,CommonResult.class);
+        return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);
     }
 
     @GetMapping("/consumer/payment/get/{id}")
-    public CommonResult<Payment> getPayment(@PathVariable("id") Long id){
+    public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
         log.info("查询成功！");
-        return restTemplate.getForObject(PAYMENT_URL+"/payment/get/"+id,CommonResult.class);
+        return restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
     }
 
     @GetMapping("/consumer/payment/getForEntity/{id}")
-    public CommonResult<Payment> getPayment2(@PathVariable("id") Long id){
-        ResponseEntity<CommonResult> entity = restTemplate.getForEntity(PAYMENT_URL+"/payment/get/"+id,CommonResult.class);
-        if(entity.getStatusCode().is2xxSuccessful()){
-            log.info(entity.getStatusCode()+"\t"+entity.getHeaders());
+    public CommonResult<Payment> getPayment2(@PathVariable("id") Long id) {
+        ResponseEntity<CommonResult> entity = restTemplate.getForEntity(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
+        if (entity.getStatusCode().is2xxSuccessful()) {
+            log.info(entity.getStatusCode() + "\t" + entity.getHeaders());
             return entity.getBody();
-        }else {
-            return new CommonResult<>(444,"操作失败");
+        } else {
+            return new CommonResult<>(444, "操作失败");
         }
     }
-  //负载均衡
+
+    //负载均衡
     @GetMapping(value = "/consumer/payment/lb")
-    public String getPaymentLB(){
+    public String getPaymentLB() {
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-        if(instances == null || instances.size() <= 0){
+        if (instances == null || instances.size() <= 0) {
             return null;
         }
         ServiceInstance serviceInstance = loadBalance.instances(instances);
@@ -67,9 +68,9 @@ public class OrderController {
     }
 
     @GetMapping(value = "/consumer/payment/lb2")
-    public String getPaymentLB2(){
+    public String getPaymentLB2() {
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-        if(instances == null || instances.size() <= 0){
+        if (instances == null || instances.size() <= 0) {
             return null;
         }
         ServiceInstance serviceInstance = loadBalance.instances(instances);

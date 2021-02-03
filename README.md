@@ -1,8 +1,11 @@
 ## Spring-Cloud-from-entry-to-abandonment
+
 ~~~~
 Spring Cloud
 ~~~~
+
 ##### 建表语句
+
 ~~~~
 create table payment
 (

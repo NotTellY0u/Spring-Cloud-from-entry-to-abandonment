@@ -10,6 +10,6 @@
         <id column="SERIAL" property="serial" jdbcType="VARCHAR"></id>
     </resultMap>
     <select id="getPaymentById" parameterType="Long" resultMap="BaseResultMap">
-        select * from payment where id = #{id}; 
+        select * from payment where id = #{id};
     </select>
 </mapper>

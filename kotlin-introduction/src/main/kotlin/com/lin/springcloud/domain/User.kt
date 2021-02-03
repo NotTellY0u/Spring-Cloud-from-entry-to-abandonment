@@ -9,8 +9,10 @@ package com.lin.springcloud.domain
  * @Date          2020/11/12 15:24
  * @ModifyDate    [修改人] [修改时间] [修改描述]
  */
-data class User(var name: String?,
-                var gender: String?,
-                var weight: Int?) {
+data class User(
+    var name: String?,
+    var gender: String?,
+    var weight: Int?
+) {
 
 }

@@ -10,6 +10,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class OrderConsulMain80 {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderConsulMain80.class,args);
+        SpringApplication.run(OrderConsulMain80.class, args);
     }
 }

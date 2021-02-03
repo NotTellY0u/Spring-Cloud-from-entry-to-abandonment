@@ -21,9 +21,9 @@ public class MyLogGateWayFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        log.info("********come in MyLogGateWayFilter: "+new Date());
+        log.info("********come in MyLogGateWayFilter: " + new Date());
         String uname = exchange.getRequest().getQueryParams().getFirst("uname");
-        if(uname == null){
+        if (uname == null) {
             log.info("*********用户名为null，非法用户");
             exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
             return exchange.getResponse().setComplete();
