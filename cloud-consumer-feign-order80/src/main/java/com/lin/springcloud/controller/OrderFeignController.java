@@ -27,7 +27,7 @@ public class OrderFeignController {
     }
 
     @GetMapping(value = "/consumer/payment/feign/timeout1")
-    public String paymentFeignTimeOut(){
+    public String paymentFeignTimeOut2(){
         return paymentFeignService.paymentFeignTimeOut();
     }
 }
