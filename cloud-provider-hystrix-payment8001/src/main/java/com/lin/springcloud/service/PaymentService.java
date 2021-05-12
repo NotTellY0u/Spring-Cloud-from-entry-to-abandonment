@@ -52,6 +52,6 @@ public class PaymentService {
     }
 
     public String paymentCircuitBreaker_fallback(Integer id) {
-        return "id不能为负数，请稍后再试";
+        return "id不能为负数，请稍后再试...";
     }
 }
