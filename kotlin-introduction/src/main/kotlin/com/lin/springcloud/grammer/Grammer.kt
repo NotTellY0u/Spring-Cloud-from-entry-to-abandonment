@@ -22,6 +22,7 @@ class Grammer {
     fun declaration() {
         var nameChangeAble = "Calvin"
         val nameUnChangeAble = "Calvin" //val类型必需初始化
+        StringBuffer
         nameChangeAble = "Yang"
     }
 
