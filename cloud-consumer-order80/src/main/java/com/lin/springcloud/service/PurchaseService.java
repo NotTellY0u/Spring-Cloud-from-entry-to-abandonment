@@ -5,10 +5,6 @@ import com.lin.springcloud.entity.PurchaseEntity;
 import com.lin.springcloud.utils.PageUtils;
 import com.lin.springcloud.vo.MergeVo;
 import com.lin.springcloud.vo.PurchaseDoneVo;
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.ware.entity.PurchaseEntity;
-import me.lin.mall.ware.vo.MergeVo;
-import me.lin.mall.ware.vo.PurchaseDoneVo;
 
 import java.util.List;
 import java.util.Map;

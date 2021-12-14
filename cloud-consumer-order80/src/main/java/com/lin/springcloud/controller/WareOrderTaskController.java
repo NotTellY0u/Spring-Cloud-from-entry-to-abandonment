@@ -1,9 +1,9 @@
 package com.lin.springcloud.controller;
 
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.common.utils.R;
-import me.lin.mall.ware.entity.WareOrderTaskEntity;
-import me.lin.mall.ware.service.WareOrderTaskService;
+import com.lin.springcloud.entity.WareOrderTaskEntity;
+import com.lin.springcloud.service.WareOrderTaskService;
+import com.lin.springcloud.utils.PageUtils;
+import com.lin.springcloud.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

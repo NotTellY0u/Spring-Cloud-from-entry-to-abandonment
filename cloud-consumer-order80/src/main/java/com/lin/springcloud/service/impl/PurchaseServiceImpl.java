@@ -1,7 +1,6 @@
 package com.lin.springcloud.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.conditions.query.Query;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
@@ -16,6 +15,7 @@ import com.lin.springcloud.service.PurchaseDetailService;
 import com.lin.springcloud.service.PurchaseService;
 import com.lin.springcloud.service.WareSkuService;
 import com.lin.springcloud.utils.PageUtils;
+import com.lin.springcloud.utils.Query;
 import com.lin.springcloud.vo.MergeVo;
 import com.lin.springcloud.vo.PurchaseDoneVo;
 import com.lin.springcloud.vo.PurchaseItemDoneVo;
@@ -35,8 +35,6 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity
     @Autowired
     PurchaseDetailService detailService;
 
-    @Autowired
-    WareSkuService wareSkuService;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -76,7 +74,6 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity
             PurchaseEntity purchaseEntity = new PurchaseEntity();
             purchaseEntity.setCreateTime(new Date());
             purchaseEntity.setUpdateTime(new Date());
-            purchaseEntity.setStatus(WareConstant.PurchaseStatusEnum.CREATED.getCode());
             this.save(purchaseEntity);
             purchaseId = purchaseEntity.getId();
         }
@@ -86,7 +83,6 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity
             PurchaseDetailEntity purchaseDetailEntity = new PurchaseDetailEntity();
             purchaseDetailEntity.setId(i);
             purchaseDetailEntity.setPurchaseId(finalPurchaseId);
-            purchaseDetailEntity.setStatus(WareConstant.PurchaseDetailStatusEnum.ASSIGNED.getCode());
             return purchaseDetailEntity;
         }).collect(Collectors.toList());
 
@@ -108,14 +104,7 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity
         List<PurchaseEntity> collect = ids.stream().map(id -> {
             PurchaseEntity purchaseEntity = this.getById(id);
             return purchaseEntity;
-        }).filter(purchaseEntity -> {
-            if (purchaseEntity.getStatus() == WareConstant.PurchaseStatusEnum.CREATED.getCode()
-                    || purchaseEntity.getStatus() == WareConstant.PurchaseStatusEnum.ASSIGNED.getCode()) {
-                return true;
-            }
-            return false;
-        }).map(item ->{
-            item.setStatus(WareConstant.PurchaseStatusEnum.RECEIVE.getCode());
+        }).filter(purchaseEntity -> false).map(item ->{
             item.setUpdateTime(new Date());
             return item;
         }).collect(Collectors.toList());
@@ -127,7 +116,6 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity
             List<PurchaseDetailEntity> detailEntities = entities.stream().map(entity -> {
                 PurchaseDetailEntity purchaseDetailEntity = new PurchaseDetailEntity();
                 purchaseDetailEntity.setId(entity.getId());
-                purchaseDetailEntity.setStatus(WareConstant.PurchaseDetailStatusEnum.BUYING.getCode());
                 return purchaseDetailEntity;
             }).collect(Collectors.toList());
             detailService.updateBatchById(detailEntities);
@@ -150,21 +138,12 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity
         List<PurchaseDetailEntity> updates = new ArrayList<>();
         for (PurchaseItemDoneVo item : items) {
             PurchaseDetailEntity purchaseDetailEntity = new PurchaseDetailEntity();
-            if(item.getStatus() == WareConstant.PurchaseDetailStatusEnum.HAS_ERROR.getCode()){
-                flag = false;
-                purchaseDetailEntity.setStatus(item.getStatus());
-            }else {
-                purchaseDetailEntity.setStatus(WareConstant.PurchaseDetailStatusEnum.FINISH.getCode());
-                PurchaseDetailEntity entity = detailService.getById(item.getItemId());
-                wareSkuService.addStock(entity.getSkuId(),entity.getWareId(),entity.getSkuNum());
-            }
             purchaseDetailEntity.setId(item.getItemId());
             updates.add(purchaseDetailEntity);
         }
         detailService.updateBatchById(updates);
         PurchaseEntity purchaseEntity = new PurchaseEntity();
         purchaseEntity.setId(id);
-        purchaseEntity.setStatus(flag?WareConstant.PurchaseDetailStatusEnum.FINISH.getCode() : WareConstant.PurchaseDetailStatusEnum.HAS_ERROR.getCode());
         purchaseEntity.setUpdateTime(new Date());
         this.updateById(purchaseEntity);
 

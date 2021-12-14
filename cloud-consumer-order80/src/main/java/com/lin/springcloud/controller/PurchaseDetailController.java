@@ -3,6 +3,7 @@ package com.lin.springcloud.controller;
 import com.lin.springcloud.entity.PurchaseDetailEntity;
 import com.lin.springcloud.service.PurchaseDetailService;
 import com.lin.springcloud.utils.PageUtils;
+import com.lin.springcloud.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

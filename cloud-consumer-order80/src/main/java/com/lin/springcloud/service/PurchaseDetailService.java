@@ -3,8 +3,6 @@ package com.lin.springcloud.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lin.springcloud.entity.PurchaseDetailEntity;
 import com.lin.springcloud.utils.PageUtils;
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.ware.entity.PurchaseDetailEntity;
 
 import java.util.List;
 import java.util.Map;
@@ -26,5 +24,9 @@ public interface PurchaseDetailService extends IService<PurchaseDetailEntity> {
      * @return 采购单详细信息
      */
     List<PurchaseDetailEntity> listDetailByPurchaseId(Long id);
+
+    interface WareOrderTaskDetailService {
+        PageUtils queryPage(Map<String, Object> params);
+    }
 }
 

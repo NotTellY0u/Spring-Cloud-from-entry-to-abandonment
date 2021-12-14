@@ -1,9 +1,9 @@
 package com.lin.springcloud.controller;
 
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.common.utils.R;
-import me.lin.mall.ware.entity.WareInfoEntity;
-import me.lin.mall.ware.service.WareInfoService;
+import com.lin.springcloud.entity.WareInfoEntity;
+import com.lin.springcloud.service.WareInfoService;
+import com.lin.springcloud.utils.PageUtils;
+import com.lin.springcloud.utils.R;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;

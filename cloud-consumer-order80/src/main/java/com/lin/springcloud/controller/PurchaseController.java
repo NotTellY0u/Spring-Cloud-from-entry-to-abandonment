@@ -1,11 +1,11 @@
 package com.lin.springcloud.controller;
 
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.common.utils.R;
-import me.lin.mall.ware.entity.PurchaseEntity;
-import me.lin.mall.ware.service.PurchaseService;
-import me.lin.mall.ware.vo.MergeVo;
-import me.lin.mall.ware.vo.PurchaseDoneVo;
+import com.lin.springcloud.entity.PurchaseEntity;
+import com.lin.springcloud.service.PurchaseService;
+import com.lin.springcloud.utils.PageUtils;
+import com.lin.springcloud.utils.R;
+import com.lin.springcloud.vo.MergeVo;
+import com.lin.springcloud.vo.PurchaseDoneVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
