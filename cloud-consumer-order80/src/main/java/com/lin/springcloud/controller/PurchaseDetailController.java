@@ -1,9 +1,8 @@
 package com.lin.springcloud.controller;
 
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.common.utils.R;
-import me.lin.mall.ware.entity.PurchaseDetailEntity;
-import me.lin.mall.ware.service.PurchaseDetailService;
+import com.lin.springcloud.entity.PurchaseDetailEntity;
+import com.lin.springcloud.service.PurchaseDetailService;
+import com.lin.springcloud.utils.PageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

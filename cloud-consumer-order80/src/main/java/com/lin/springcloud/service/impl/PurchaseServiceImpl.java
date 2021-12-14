@@ -1,28 +1,31 @@
 package com.lin.springcloud.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.Query;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
+import com.baomidou.mybatisplus.extension.conditions.query.QueryChainWrapper;
+import com.baomidou.mybatisplus.extension.conditions.update.LambdaUpdateChainWrapper;
+import com.baomidou.mybatisplus.extension.conditions.update.UpdateChainWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import me.lin.mall.common.constant.WareConstant;
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.common.utils.Query;
-import me.lin.mall.ware.dao.PurchaseDao;
-import me.lin.mall.ware.entity.PurchaseDetailEntity;
-import me.lin.mall.ware.entity.PurchaseEntity;
-import me.lin.mall.ware.service.PurchaseDetailService;
-import me.lin.mall.ware.service.PurchaseService;
-import me.lin.mall.ware.service.WareSkuService;
-import me.lin.mall.ware.vo.MergeVo;
-import me.lin.mall.ware.vo.PurchaseDoneVo;
-import me.lin.mall.ware.vo.PurchaseItemDoneVo;
+import com.lin.springcloud.dao.PurchaseDao;
+import com.lin.springcloud.entity.PurchaseDetailEntity;
+import com.lin.springcloud.entity.PurchaseEntity;
+import com.lin.springcloud.service.PurchaseDetailService;
+import com.lin.springcloud.service.PurchaseService;
+import com.lin.springcloud.service.WareSkuService;
+import com.lin.springcloud.utils.PageUtils;
+import com.lin.springcloud.vo.MergeVo;
+import com.lin.springcloud.vo.PurchaseDoneVo;
+import com.lin.springcloud.vo.PurchaseItemDoneVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.io.Serializable;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 
@@ -169,4 +172,173 @@ public class PurchaseServiceImpl extends ServiceImpl<PurchaseDao, PurchaseEntity
         return null;
     }
 
+    @Override
+    public boolean save(PurchaseEntity entity) {
+        return super.save(entity);
+    }
+
+    @Override
+    public boolean saveBatch(Collection<PurchaseEntity> entityList) {
+        return super.saveBatch(entityList);
+    }
+
+    @Override
+    public boolean saveOrUpdateBatch(Collection<PurchaseEntity> entityList) {
+        return super.saveOrUpdateBatch(entityList);
+    }
+
+    @Override
+    public boolean removeById(Serializable id) {
+        return super.removeById(id);
+    }
+
+    @Override
+    public boolean removeByMap(Map<String, Object> columnMap) {
+        return super.removeByMap(columnMap);
+    }
+
+    @Override
+    public boolean remove(Wrapper<PurchaseEntity> queryWrapper) {
+        return super.remove(queryWrapper);
+    }
+
+    @Override
+    public boolean removeByIds(Collection<? extends Serializable> idList) {
+        return super.removeByIds(idList);
+    }
+
+    @Override
+    public boolean updateById(PurchaseEntity entity) {
+        return super.updateById(entity);
+    }
+
+    @Override
+    public boolean update(Wrapper<PurchaseEntity> updateWrapper) {
+        return super.update(updateWrapper);
+    }
+
+    @Override
+    public boolean update(PurchaseEntity entity, Wrapper<PurchaseEntity> updateWrapper) {
+        return super.update(entity, updateWrapper);
+    }
+
+    @Override
+    public boolean updateBatchById(Collection<PurchaseEntity> entityList) {
+        return super.updateBatchById(entityList);
+    }
+
+    @Override
+    public PurchaseEntity getById(Serializable id) {
+        return super.getById(id);
+    }
+
+    @Override
+    public List<PurchaseEntity> listByIds(Collection<? extends Serializable> idList) {
+        return super.listByIds(idList);
+    }
+
+    @Override
+    public List<PurchaseEntity> listByMap(Map<String, Object> columnMap) {
+        return super.listByMap(columnMap);
+    }
+
+    @Override
+    public PurchaseEntity getOne(Wrapper<PurchaseEntity> queryWrapper) {
+        return super.getOne(queryWrapper);
+    }
+
+    @Override
+    public int count() {
+        return super.count();
+    }
+
+    @Override
+    public int count(Wrapper<PurchaseEntity> queryWrapper) {
+        return super.count(queryWrapper);
+    }
+
+    @Override
+    public List<PurchaseEntity> list(Wrapper<PurchaseEntity> queryWrapper) {
+        return super.list(queryWrapper);
+    }
+
+    @Override
+    public List<PurchaseEntity> list() {
+        return super.list();
+    }
+
+    @Override
+    public <E extends IPage<PurchaseEntity>> E page(E page, Wrapper<PurchaseEntity> queryWrapper) {
+        return super.page(page, queryWrapper);
+    }
+
+    @Override
+    public <E extends IPage<PurchaseEntity>> E page(E page) {
+        return super.page(page);
+    }
+
+    @Override
+    public List<Map<String, Object>> listMaps(Wrapper<PurchaseEntity> queryWrapper) {
+        return super.listMaps(queryWrapper);
+    }
+
+    @Override
+    public List<Map<String, Object>> listMaps() {
+        return super.listMaps();
+    }
+
+    @Override
+    public List<Object> listObjs() {
+        return super.listObjs();
+    }
+
+    @Override
+    public <V> List<V> listObjs(Function<? super Object, V> mapper) {
+        return super.listObjs(mapper);
+    }
+
+    @Override
+    public List<Object> listObjs(Wrapper<PurchaseEntity> queryWrapper) {
+        return super.listObjs(queryWrapper);
+    }
+
+    @Override
+    public <V> List<V> listObjs(Wrapper<PurchaseEntity> queryWrapper, Function<? super Object, V> mapper) {
+        return super.listObjs(queryWrapper, mapper);
+    }
+
+    @Override
+    public <E extends IPage<Map<String, Object>>> E pageMaps(E page, Wrapper<PurchaseEntity> queryWrapper) {
+        return super.pageMaps(page, queryWrapper);
+    }
+
+    @Override
+    public <E extends IPage<Map<String, Object>>> E pageMaps(E page) {
+        return super.pageMaps(page);
+    }
+
+    @Override
+    public QueryChainWrapper<PurchaseEntity> query() {
+        return super.query();
+    }
+
+    @Override
+    public LambdaQueryChainWrapper<PurchaseEntity> lambdaQuery() {
+        return super.lambdaQuery();
+    }
+
+    @Override
+    public UpdateChainWrapper<PurchaseEntity> update() {
+        return super.update();
+    }
+
+    @Override
+    public LambdaUpdateChainWrapper<PurchaseEntity> lambdaUpdate() {
+        return super.lambdaUpdate();
+    }
+
+    @Override
+    public boolean saveOrUpdate(PurchaseEntity entity, Wrapper<PurchaseEntity> updateWrapper) {
+        return super.saveOrUpdate(entity, updateWrapper);
+    }
 }
