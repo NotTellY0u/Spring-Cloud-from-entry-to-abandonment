@@ -3,11 +3,11 @@ package com.lin.springcloud.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.common.utils.Query;
-import me.lin.mall.ware.dao.WareOrderTaskDao;
-import me.lin.mall.ware.entity.WareOrderTaskEntity;
-import me.lin.mall.ware.service.WareOrderTaskService;
+import com.lin.springcloud.dao.WareOrderTaskDao;
+import com.lin.springcloud.entity.WareOrderTaskEntity;
+import com.lin.springcloud.service.WareOrderTaskService;
+import com.lin.springcloud.utils.PageUtils;
+import com.lin.springcloud.utils.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

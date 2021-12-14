@@ -1,7 +1,7 @@
 package com.lin.springcloud.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import me.lin.mall.ware.entity.WareOrderTaskDetailEntity;
+import com.lin.springcloud.entity.WareOrderTaskDetailEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

@@ -4,9 +4,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.lin.springcloud.entity.WareSkuEntity;
 import com.lin.springcloud.utils.PageUtils;
 import com.lin.springcloud.vo.SkuHasStockVo;
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.ware.entity.WareSkuEntity;
-import me.lin.mall.ware.vo.SkuHasStockVo;
 
 import java.util.List;
 import java.util.Map;

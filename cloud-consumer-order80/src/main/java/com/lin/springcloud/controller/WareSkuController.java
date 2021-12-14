@@ -1,11 +1,11 @@
 package com.lin.springcloud.controller;
 
+import com.lin.springcloud.entity.WareSkuEntity;
+import com.lin.springcloud.service.WareSkuService;
+import com.lin.springcloud.utils.PageUtils;
+import com.lin.springcloud.utils.R;
+import com.lin.springcloud.vo.SkuHasStockVo;
 import lombok.extern.slf4j.Slf4j;
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.common.utils.R;
-import me.lin.mall.ware.entity.WareSkuEntity;
-import me.lin.mall.ware.service.WareSkuService;
-import me.lin.mall.ware.vo.SkuHasStockVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

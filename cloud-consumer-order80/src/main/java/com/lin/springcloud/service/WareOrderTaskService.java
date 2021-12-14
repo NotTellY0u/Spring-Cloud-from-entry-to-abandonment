@@ -3,9 +3,6 @@ package com.lin.springcloud.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.lin.springcloud.entity.WareOrderTaskEntity;
 import com.lin.springcloud.utils.PageUtils;
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.ware.entity.WareOrderTaskEntity;
-
 import java.util.Map;
 
 /**

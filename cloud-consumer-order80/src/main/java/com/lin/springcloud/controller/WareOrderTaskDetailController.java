@@ -1,9 +1,9 @@
 package com.lin.springcloud.controller;
 
-import me.lin.mall.common.utils.PageUtils;
-import me.lin.mall.common.utils.R;
-import me.lin.mall.ware.entity.WareOrderTaskDetailEntity;
-import me.lin.mall.ware.service.WareOrderTaskDetailService;
+import com.lin.springcloud.entity.WareOrderTaskDetailEntity;
+import com.lin.springcloud.service.PurchaseDetailService;
+import com.lin.springcloud.utils.PageUtils;
+import com.lin.springcloud.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +23,7 @@ import java.util.Map;
 @RequestMapping("ware/wareordertaskdetail")
 public class WareOrderTaskDetailController {
     @Autowired
-    private WareOrderTaskDetailService wareOrderTaskDetailService;
+    private PurchaseDetailService.WareOrderTaskDetailService wareOrderTaskDetailService;
 
     /**
      * 列表
