@@ -28,6 +28,7 @@
         <module>kotlin-introduction</module>
         <module>service-webflux</module>
         <module>service-functiontest</module>
+        <module>renren-generator</module>
     </modules>
 
     <repositories>
