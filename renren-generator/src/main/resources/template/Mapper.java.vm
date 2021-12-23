@@ -1,6 +1,6 @@
-package ${package}.${moduleName}.mapper;
+package ${package}.mapper;
 
-import ${package}.${moduleName}.entity.${className}Entity;
+import ${package}.entity.${className};
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -11,6 +11,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date ${datetime}
  */
 @Mapper
-public interface ${className}Mapper extends BaseMapper<${className}Entity> {
+public interface ${className}Mapper extends BaseMapper<${className}> {
 	
 }
