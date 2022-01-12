@@ -77,7 +77,7 @@ public class GenUtils {
         tableEntity.setTableName(table.get("tableName"));
         tableEntity.setComments(table.get("tableComment"));
         //表名转换成Java类名
-        String className = tableToJava(tableEntity.getTableName(), config.getStringArray("tablePrefix"));
+        String className = tableToJava(tableEntity.getTableName().replace(".","_"), config.getStringArray("tablePrefix"));
         tableEntity.setClassName(className);
         tableEntity.setClassname(StringUtils.uncapitalize(className));
 
