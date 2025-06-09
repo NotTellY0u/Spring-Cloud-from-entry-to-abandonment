@@ -1,6 +1,5 @@
 package com.lin.springcloud.utils;
 
-import org.apache.commons.lang.StringUtils;
 
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
@@ -49,10 +48,6 @@ public class BeanUtils {
                 Object fieldObject = field.get(object);
                 if (fieldObject != null) {
                     if (field.getType() == Date.class) {
-                        if (StringUtils.isNotEmpty(dateFormatPattern)) {
-                            String dateString = new SimpleDateFormat(dateFormatPattern, Locale.CHINA).format(fieldObject);
-                            map.put(field.getName(), dateString);
-                        }
                     } else if (field.getType() == Integer.class || field.getType() == Long.class || field.getType() == Double.class || field.getType() == BigDecimal.class) {
                         String numberString = fieldObject.toString();
                         map.put(field.getName(), numberString);
